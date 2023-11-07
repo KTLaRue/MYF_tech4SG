@@ -8,7 +8,7 @@ This is a project that aim to reduce food waste and help people find food that m
 
 website:
 page hosted at http://localhost:3000/
-activate by node router.js 
+activate by 'node router.js' in terminal 
 
 
 database info:
