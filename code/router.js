@@ -6,13 +6,13 @@ const http = require('http');
 //   res.send('Home!')
 // });
 
-// app.get('/hello', (req, res) => {
+app.get('/test', (req, res) => {
     
-// });
+});
 
-// app.get('*', (req, res) => {
-//     res.send(':3')
-// });
+app.get('*', (req, res) => {
+    res.send(':3')
+});
 
 
 const myLogger = function (req, res, next) {
