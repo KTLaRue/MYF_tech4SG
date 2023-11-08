@@ -6,7 +6,7 @@ const http = require('http');
 //   res.send('Home!')
 // });
 
-app.get('/test', (req, res) => {
+app.get('../test', (req, res) => {
     
 });
 
