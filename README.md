@@ -6,9 +6,9 @@
 This is a project that aim to reduce food waste and help people find food that matches their budget, lifestyle, and dietary restrictions through a website 
 
 
-website:
+test website:
 page hosted at http://localhost:3000/
-activate by 'node router.js' in terminal 
+activate by 'node router.js' in terminal when in the code file
 
 
 database info:
