@@ -1,24 +1,39 @@
-const coolFunction= function (req, res, next){
-    console.log("button clicked")
+import React, { useState } from "react";
+import styled from "styled-components";
+
+  
+  const Button = styled.button`
+    background-color: ${(props) => theme[props.theme].default};
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    outline: 0;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px lightgray;
+    transition: ease background-color 250ms;
+    &:hover {
+      background-color: ${(props) => theme[props.theme].hover};
+    }
+    &:disabled {
+      cursor: default;
+      opacity: 0.7;
+    }
+  `;
+
+
+function clicked(){
+    console.log("testing button clicked")
 }
 
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const menuButton = document.getElementById("menu-button");
-//     const menuList = document.getElementById("menu-list");
-
-//     menuButton.addEventListener("click", function () {
-//         menuList.style.display = menuList.style.display === "block" ? "none" : "block";
-//     });
-
-//     const button1 = document.getElementById("button1");
-//     const button2 = document.getElementById("button2");
-
-//     button1.addEventListener("click", function () {
-//         alert("Button 1 clicked!");
-//     });
-
-//     button2.addEventListener("click", function () {
-//         alert("Button 2 clicked!");
-//     });
-// });
+export default function App() {
+    return (
+      <>
+        <div>
+          <Button onClick={clickMe}>Button</Button>
+        </div>
+      </>
+    );
+  }
+  
