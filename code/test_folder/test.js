@@ -23,8 +23,8 @@ import styled from "styled-components";
   `;
 
 
-function clicked(){
-    console.log("testing button clicked")
+function clicked(res){
+    console.log("testing button action calling from test")
 }
 
 export default function App() {
