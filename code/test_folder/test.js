@@ -1,5 +1,11 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+// const clicked = require('./test.js');
+const {React, useState} = require( "react");
+const {styled} = require("styled-components");
+
+
+
+// import React, { useState } from "react";
+// import styled from "styled-components";
 
   
   const Button = styled.button`
@@ -27,13 +33,15 @@ function clicked(res){
     console.log("testing button action calling from test")
 }
 
-export default function App() {
-    return (
-      <>
-        <div>
-          <Button onClick={clickMe}>Button</Button>
-        </div>
-      </>
-    );
-  }
+// export clicked
+
+// export default function App() {
+//     return (
+//       <>
+//         <div>
+//           <Button onClick={clickMe}>Button</Button>
+//         </div>
+//       </>
+//     );
+//   }
   

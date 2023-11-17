@@ -3,21 +3,29 @@ const app = express()
 const port = 3000
 const http = require('http');
 
-// import clicked from './test';
+const clicked = require('./test.js');
+// import clicked from './test.js';
 
 const myLogger = function (req, res, next) {
   console.log('Logged via logger')
   next()
 }
 
+function testPrint(res) {
+  res.send('testing print on action xyz');
+  // next()
+}
 
 function buttonAction1(res){
   res.send('button action from test_router working');
+  // next()
 }
 
 app.get("/dest1", function (req, res) {
-  // clicked(res);
-  buttonAction1(res)
+  clicked(res);
+  // buttonAction1(res)
+  // testPrint(res)
+
 });
 
 app.use(myLogger)
