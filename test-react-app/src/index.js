@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import PostRequest from './EdamamTest';
+import Home from './Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<PostRequest />);
+root.render(<Home />);
