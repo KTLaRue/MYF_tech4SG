@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Maps Api</title>
-
     <link rel="stylesheet" href="/style.css">
-</head>
-
+</head>cd documentc
 <body>
 <h1>Google Maps</h1>
 
 <div id="map"></div>
 
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZjD7YEAuFV_jMfrSdcWmSYWUq9iTMJU&callback=initMap"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZjD7YEAuFV_jMfrSdcWmSYWUq9iTMJU&callback=initMap&libraries=places"></script>
+
+
+<!-- Add the HTML elements for user input here -->
+<div id="locationInput">
+    <form id="locationForm">
+        <input type="text" id="userLocation" placeholder="Enter your location">
+        <button type="button" id="findStoresButton">Find Grocery Stores</button>
+        <button type="button" id="useMyLocationButton">Use My Location</button>
+    </form>
+</div>
+
 <script src="/app.js"></script>
 </body>
 </html>
+git
