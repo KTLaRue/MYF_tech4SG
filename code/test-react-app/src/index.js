@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import PostRequest from './EdamamTest';
+import App from '../../../test-react-app/src/RecipeSearch';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<PostRequest />);
+root.render(<App />);
