@@ -4,26 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Maps Api</title>
-    <link rel="stylesheet" href="/style.css">
-</head>cd documentc
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #header {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #map-container {
+            position: absolute;
+            top: 56px; /* Adjust based on your header height */
+            width: 100%;
+            height: calc(100% - 56px); /* Adjust based on your header height */
+        }
+
+        #map {
+            height: 100%;
+        }
+
+        #locationInput {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
-<h1>Google Maps</h1>
-
-<div id="map"></div>
-
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZjD7YEAuFV_jMfrSdcWmSYWUq9iTMJU&callback=initMap&libraries=places"></script>
-
-
-<!-- Add the HTML elements for user input here -->
-<div id="locationInput">
-    <form id="locationForm">
-        <input type="text" id="userLocation" placeholder="Enter your location">
-        <button type="button" id="findStoresButton">Find Grocery Stores</button>
-        <button type="button" id="useMyLocationButton">Use My Location</button>
-    </form>
+<div id="header">
+    <button onclick="goBack()">Back</button>
+    <h1>Google Maps</h1>
 </div>
 
+<div id="map-container">
+    <div id="map"></div>
+
+    <!-- Add the HTML elements for user input here -->
+    <div id="locationInput">
+        <form id="locationForm">
+            <!-- Update the input type to "text" and add an id for the Places Autocomplete service -->
+            <input type="text" id="mapSearch" placeholder="Search for a location">
+            <button type="button" id="findStoresButton">Find Grocery Stores</button>
+            <button type="button" id="useMyLocationButton">Use My Location</button>
+        </form>
+    </div>
+</div>
+
+<!-- Add the Google Maps API script with the Places library -->
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZjD7YEAuFV_jMfrSdcWmSYWUq9iTMJU&callback=initMap&libraries=places"></script>
 <script src="/app.js"></script>
+<script>
+    // Your existing JavaScript code
+
+    function goBack() {
+        // Handle back button functionality here
+        // For example, you can navigate to the previous page or close the map view.
+        alert('Implement your back button functionality here.');
+    }
+</script>
 </body>
 </html>
-git
