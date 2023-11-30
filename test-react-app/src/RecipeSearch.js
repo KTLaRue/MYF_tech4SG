@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
+import RecipeDisplay from './RecipeDisplay';
 
-function RecipeSearch() {
+function RecipeSearch({displayQuery}) {
   const [data, setData] = useState(null);
   
   const [q, setQ] = useState("");
@@ -18,6 +19,13 @@ function RecipeSearch() {
       .catch(error => console.error(error));
   }
 
+  function nextPage() {
+    fetch(data._links.next.href)
+    .then(response => response.json())
+    .then(json => setData(json))
+    .catch(error => console.error(error));
+
+  }
 
   return (
     <div>
@@ -25,8 +33,11 @@ function RecipeSearch() {
       <button onClick={queryInput}>
         Search
       </button>
-      <br></br>   
-      {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Loading...'}
+      <br></br>  
+      <RecipeDisplay queryData={data}/>
+      {data ? <button onClick={nextPage}>Next Page</button> : ''}
+      <br></br> 
+      {/*data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Waiting for input...'*/}
     </div>
   );
 }
