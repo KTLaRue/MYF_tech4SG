@@ -35,21 +35,8 @@ class Home extends React.Component {
                 Returned Id: {articleId}
             </div>
         </div>
-            /*cool nav bar that sets view on click*/
-
-
-            // (view === VIEWS.HOMEPAGE ? (
-            //     <div className="card text-center m-3">
-            //         <button>Cool Button</button>
-            //         <h5 className="card-header">Simple POST Request</h5>
-            //         <div className="card-body">
-            //             Returned Id: {articleId}
-            //         </div>
-            //     </div>
-            // ) : null)
-
         );
-}
+    }
 }
 
 export default Home; 
