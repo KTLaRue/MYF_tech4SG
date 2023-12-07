@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 
-export function ButtonWtext({aspect, button}) {
+export function BoxWtext({aspect, button}) {
   if (button==null){
     return (
       <Fragment>

@@ -6,9 +6,13 @@ import { Helmet } from 'react-helmet'
 import '../styles/style.css'
 import { Navbar } from '../components/navbar'
 import { Title } from '../components/Title'
-import { ButtonWtext } from '../components/buttonWtext'
-import { CatCol } from '../components/catCol'
+import { BoxWtext } from '../components/boxWtext'
 import { ButtonLink } from '../components/buttonLink'
+import RecipeDisplay from './RecipeDisplay'
+import { Checkbox } from '../components/checkbox'
+import { useState } from 'react'
+
+// const critera = []
 
 const diet_cat = ["Balanced", "High-fiber", "Low-Crab", "Low-Fat", "Low-Sodium", "High-Protein"]
 const cuisine_cat = ["American", "Asian", "British", "Caribbean", "Chinese", 
@@ -28,7 +32,9 @@ const health_cat = ["Alcohol-Cocktail", "Alcohol-Free", "Celery-Free", "Crustace
                     "Peanut-Free", "Pork-Free", "Red-Meat-Free", "Sesame-Free", 
                     "Shellfish-Free", "Soy-Free", "Sugar-Conscious", "Sulfite-Free", 
                     "Tree-Nut-Free", "Vegan", "Vegetarian", "Wheat-Free"]
-      
+function Find_criteria(){
+  const [criteria, setCriteria] = useState([])
+}   
 
 const Recipes = (props) => {
   return (
@@ -41,17 +47,39 @@ const Recipes = (props) => {
       <Title title="Looking for new recipes? Find them here!"/>
 
       <div className="button-bar">
-        <ButtonWtext aspect="Calories"/>
-        <ButtonWtext aspect="Time"/>
-        <ButtonWtext aspect="Meal name"/>
+        <BoxWtext aspect="Calories"/>
+        <BoxWtext aspect="Time"/>
+        <BoxWtext aspect="Meal name"/>
         {/* button below should map to recipe display page */}
-        <ButtonLink label="Search"/> 
+        <ButtonLink label="Search" loc={RecipeDisplay}/> 
       </div>
       <div className="cat-options">
-        <CatCol catagory="Diet" subCat={diet_cat}/>
-        <CatCol catagory="Health" subCat={health_cat}/>
-        <CatCol catagory="Cuisine" subCat={cuisine_cat}/>
-        <CatCol catagory="Dish" subCat={dish_cat}/>
+        <div className="cat-name">
+          <span>{"Diet"}</span>
+          {diet_cat.map(name => (
+            <Checkbox key={name} select={name}/>
+          ))}
+
+        </div>
+        <div className="cat-name">
+          <span>{"Health"}</span>
+          {health_cat.map(name => (
+            <Checkbox key={name} select={name}/>
+          ))}
+
+        </div><div className="cat-name">
+          <span>{"Cuisine"}</span>
+          {cuisine_cat.map(name => (
+            <Checkbox key={name} select={name}/>
+          ))}
+
+        </div><div className="cat-name">
+          <span>{"Dish"}</span>
+          {diet_cat.map(name => (
+            <Checkbox key={name} select={name}/>
+          ))}
+
+        </div>
       </div>
     </div>
   )
