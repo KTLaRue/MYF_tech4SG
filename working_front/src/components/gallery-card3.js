@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import './gallery-card3.css'
 
-const GalleryCard3 = (props) => {
+const GalleryCard = (props) => {
   return (
     <div className={`gallery-card3-gallery-card ${props.rootClassName} `}>
       <img
@@ -16,10 +16,10 @@ const GalleryCard3 = (props) => {
   )
 }
 
-GalleryCard3.propTypes = {
+GalleryCard.propTypes = {
   image_src: PropTypes.string,
   rootClassName: PropTypes.string,
   image_alt: PropTypes.string,
 }
 
-export default GalleryCard3
+export default GalleryCard
