@@ -9,7 +9,6 @@ function initMap() {
     var directionsRenderer = new google.maps.DirectionsRenderer({ map: map });
 
     // Function to add a marker to the map
-// Function to add a marker to the map
     function addMarker(property) {
         var marker = new google.maps.Marker({
             position: property.location,
@@ -63,7 +62,6 @@ function initMap() {
         // For example, if you store markers in an array, you can iterate through the array and setMap(null) for each marker.
     }
 
-    // Function to calculate and display directions
     // Function to calculate and display directions
     function calculateAndDisplayRoute(destination) {
         const userLocationInput = document.getElementById('mapSearch');
