@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import { Helmet } from 'react-helmet'
 
-// import '../styles/inventory.css'
 import '../styles/style.css'
 import { Navbar } from '../components/navbar'
 import { Title } from '../components/Title'
