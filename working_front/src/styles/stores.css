@@ -111,7 +111,7 @@
 .stores-text {
   margin-bottom: var(--dl-space-space-unit);
 }
-.stores-text1 {
+/* .stores-text1 {
   margin-bottom: var(--dl-space-space-unit);
 }
 .stores-text2 {
@@ -122,7 +122,7 @@
 }
 .stores-text4 {
   margin-bottom: var(--dl-space-space-unit);
-}
+} */
 .stores-buttons {
   display: flex;
   margin-top: var(--dl-space-space-unit);

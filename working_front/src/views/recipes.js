@@ -8,6 +8,7 @@ import { Navbar } from '../components/navbar'
 import { Title } from '../components/Title'
 import { ButtonWtext } from '../components/buttonWtext'
 import { CatCol } from '../components/catCol'
+import { ButtonLink } from '../components/buttonLink'
 
 const diet_cat = ["Balanced", "High-fiber", "Low-Crab", "Low-Fat", "Low-Sodium", "High-Protein"]
 // const health_cat = []
@@ -16,7 +17,7 @@ const diet_cat = ["Balanced", "High-fiber", "Low-Crab", "Low-Fat", "Low-Sodium",
 
 const Recipes = (props) => {
   return (
-    <div className="recipes-container">
+    <div className="page-container">
       <Helmet>
         <title>recipes - Map_Your_Food</title>
         <meta property="og:title" content="recipes - Map_Your_Food" />
@@ -29,6 +30,8 @@ const Recipes = (props) => {
         <ButtonWtext aspect="Calories"/>
         <ButtonWtext aspect="Time"/>
         <ButtonWtext aspect="Meal name"/>
+        {/* button below should map to recipe display page */}
+        <ButtonLink label="Search"/> 
       </div>
       <div className="cat-options">
         <CatCol catagory="Diet" subCat={diet_cat}/>

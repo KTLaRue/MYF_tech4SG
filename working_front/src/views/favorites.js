@@ -8,7 +8,7 @@ import { Title } from '../components/Title'
 
 const Favorites = (props) => {
   return (
-    <div className="favorites-container">
+    <div className="page-container">
       <Helmet>
         <title>favorites - Map_Your_Food</title>
         <meta property="og:title" content="favorites - Map_Your_Food" />

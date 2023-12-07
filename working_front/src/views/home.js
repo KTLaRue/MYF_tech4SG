@@ -12,7 +12,7 @@ import '../styles/home.css'
 
 const Home = (props) => {
   return (
-    <div className="home-container">
+    <div className="page-container">
       <Helmet>
         <title>Map_Your_Food</title>
         <meta property="og:title" content="Map_Your_Food" />

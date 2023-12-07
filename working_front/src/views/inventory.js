@@ -8,7 +8,7 @@ import { Navbar } from '../components/navbar'
 
 const Inventory = (props) => {
   return (
-    <div className="inventory-container">
+    <div className="page-container">
       <Helmet>
         <title>Inventory - Map_Your_Food</title>
         <meta property="og:title" content="Inventory - Map_Your_Food" />
