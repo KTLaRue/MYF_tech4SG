@@ -15,7 +15,7 @@ import Inventory from './views/inventory'
 import Stores from './views/stores'
 import Recipes from './views/recipes'
 import NotFound from './views/not-found'
-import RecipeSearch from "./views/RecipeDisplay"
+import RecipeDisplay from './views/RecipeDisplay';
 
 
 export default function App() {
@@ -27,6 +27,7 @@ export default function App() {
         <Route path="/inventory" exact component={Inventory}/>
         <Route path="/stores" exact component={Stores}/>
         <Route path="/recipes" exact component={Recipes}/>
+        <Route path="/recipeDisplay" exact component={RecipeDisplay}/>
         <Route path="*" exact component={NotFound}/>
       </Switch>
     </Router>

@@ -15,10 +15,12 @@ import { useState } from 'react'
 // const critera = []
 
 const diet_cat = ["Balanced", "High-fiber", "Low-Crab", "Low-Fat", "Low-Sodium", "High-Protein"]
+
 const cuisine_cat = ["American", "Asian", "British", "Caribbean", "Chinese", 
                     "Central Europe", "Eastern Europe", "French", "Indian", 
                     "Italian", "Japanese", "Kosher", "Mediterranean", "Mexican", 
                     "Middle Eastern", "Nordic", "South American", "South East Asian"]
+
 const dish_cat = ["Biscuits and Cookies", "Bread", "Cereals", "Condiments and Sauces", 
                   "Desserts", "Drinks", "Main Course", "Pancake", "Preps", "Preserve", 
                   "Salad", "Sandwiches", "Soup", "Side Dish", "Sweets"]
@@ -32,9 +34,10 @@ const health_cat = ["Alcohol-Cocktail", "Alcohol-Free", "Celery-Free", "Crustace
                     "Peanut-Free", "Pork-Free", "Red-Meat-Free", "Sesame-Free", 
                     "Shellfish-Free", "Soy-Free", "Sugar-Conscious", "Sulfite-Free", 
                     "Tree-Nut-Free", "Vegan", "Vegetarian", "Wheat-Free"]
-// function Find_criteria(){
-//   const [criteria, setCriteria] = useState([])
-// }   
+                    
+function Find_criteria(){
+  const [criteria, setCriteria] = useState([])
+}   
 
 const Recipes = (props) => {
   return (
@@ -53,7 +56,6 @@ const Recipes = (props) => {
         {/* button below should map to recipe display page */}
         {/* <ButtonLink label="Search" loc=/>  */}
         <ButtonLink label="Search"/> 
-
       </div>
       <div className="cat-options">
         <div className="cat-name">
@@ -77,10 +79,9 @@ const Recipes = (props) => {
 
         </div><div className="cat-name">
           <span>{"Dish"}</span>
-          {diet_cat.map(name => (
+          {dish_cat.map(name => (
             <Checkbox key={name} select={name}/>
           ))}
-
         </div>
       </div>
     </div>
