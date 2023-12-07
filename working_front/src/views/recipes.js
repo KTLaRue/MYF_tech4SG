@@ -7,6 +7,12 @@ import '../styles/recipes.css'
 import { Navbar } from '../components/navbar'
 import { Title } from '../components/Title'
 import { ButtonWtext } from '../components/buttonWtext'
+import { CatCol } from '../components/catCol'
+
+const diet_cat = ["Balanced", "High-fiber", "Low-Crab", "Low-Fat", "Low-Sodium", "High-Protein"]
+// const health_cat = []
+// const cuisine_cat = []
+// const dish_cat = []
 
 const Recipes = (props) => {
   return (
@@ -19,46 +25,18 @@ const Recipes = (props) => {
         <Navbar/>
         <Title title="Looking for new recipes? Find them here!"/>
       </div>
-      <div className="recipes-search-ingredients">
-        <input type="text" placeholder="meal name" className="input" />
-        <button type="button" className="recipes-button button">
-          Search
-        </button>
+      <div className="button-bar">
+        <ButtonWtext aspect="Calories"/>
+        <ButtonWtext aspect="Time"/>
+        <ButtonWtext aspect="Meal name"/>
       </div>
-      <ButtonWtext first="Calories" second="Time"/>
-      <div className="recipes-container2">
-        <div className="recipes-diet">
-          <span className="recipes-title">Diet</span>
-          <div className="recipes-balanced">
-            <input
-              type="checkbox"
-               
-              className="recipes-checkbox"
-            />
-            <span className="recipes-text01">Balanced</span>
-          </div>
-          <div className="recipes-high-fiber">
-            <input type="checkbox"   />
-            <span>High-Fiber</span>
-          </div>
-          <div className="recipes-content-box">
-            <input type="checkbox"   />
-            <span>Low-Carb</span>
-          </div>
-          <div className="recipes-content-box">
-            <input type="checkbox"   />
-            <span>Low-Fat</span>
-          </div>
-          <div className="recipes-content-box">
-            <input type="checkbox"   />
-            <span>Low-Sodium</span>
-          </div>
-          <div className="recipes-content-box">
-            <input type="checkbox"   />
-            <span>High-Protein</span>
-          </div>
-        </div>
-        <div className="recipes-health">
+      <div className="cat-options">
+        <CatCol catagory="Diet" subCat={diet_cat}/>
+        {/* <CatCol catagory="Health" subCat={health_cat}/> */}
+        {/* <CatCol catagory="Cuisine" subCat={cuisine_cat}/> */}
+        {/* <CatCol catagory="Dish" subCat={dish_cat}/> */}
+{/* need to update past here */}
+        <div className="cat-name">
           <span className="recipes-title1">Health</span>
           <div className="recipes-alcohol-cocktail">
             <input

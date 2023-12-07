@@ -180,65 +180,25 @@
   align-self: center;
   padding-left: var(--dl-space-space-unit);
 }
-/* .recipes-text-inputs {
-  flex: 0 0 auto;
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-} */
-/* .recipes-calories {
-  flex: 0 0 auto;
-  width: 33%;
-  height: 100px;
-  display: flex;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-} */
+
 .recipes-auto-width {
   width: auto;
 }
-/* .recipes-calories1 {
-  width: auto;
-} */
-.recipes-time {
-  flex: 0 0 auto;
-  width: 352px;
-  height: 100px;
-  display: flex;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-}
-/* .recipes-calories2 {
-  width: auto;
-} */
-.recipes-container2 {
+
+/* .recipes-container2 {
   width: 100%;
   height: auto;
   display: flex;
   align-self: flex-start;
   align-items: flex-start;
-}
-.recipes-diet {
-  flex: 0 0 auto;
-  width: 25%;
-  height: auto;
-  display: flex;
-  align-self: flex-start;
-  align-items: flex-start;
-  padding-left: var(--dl-space-space-threeunits);
-  padding-right: var(--dl-space-space-threeunits);
-  flex-direction: column;
-  justify-content: center;
-}
-.recipes-title {
+} */
+
+/* .subtitle {
   align-self: center;
   text-align: center;
   padding-bottom: var(--dl-space-space-halfunit);
-}
-.recipes-balanced {
+} */
+/* .recipes-balanced {
   flex: 0 0 auto;
   width: auto;
   height: auto;
@@ -246,20 +206,20 @@
   align-items: flex-start;
   margin-bottom: var(--dl-space-space-halfunit);
   justify-content: flex-start;
-}
+} */
 .recipes-checkbox {
   align-self: center;
 }
 .recipes-text05 {
   align-self: center;
 }
-.recipes-high-fiber {
+/* .recipes-high-fiber {
   display: flex;
   align-items: center;
   margin-bottom: var(--dl-space-space-halfunit);
   flex-direction: row;
   justify-content: center;
-}
+} */
 .recipes-content-box {
   flex: 0 0 auto;
   width: auto;
