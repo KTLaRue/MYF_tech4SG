@@ -32,9 +32,9 @@ const health_cat = ["Alcohol-Cocktail", "Alcohol-Free", "Celery-Free", "Crustace
                     "Peanut-Free", "Pork-Free", "Red-Meat-Free", "Sesame-Free", 
                     "Shellfish-Free", "Soy-Free", "Sugar-Conscious", "Sulfite-Free", 
                     "Tree-Nut-Free", "Vegan", "Vegetarian", "Wheat-Free"]
-function Find_criteria(){
-  const [criteria, setCriteria] = useState([])
-}   
+// function Find_criteria(){
+//   const [criteria, setCriteria] = useState([])
+// }   
 
 const Recipes = (props) => {
   return (
@@ -51,7 +51,9 @@ const Recipes = (props) => {
         <BoxWtext aspect="Time"/>
         <BoxWtext aspect="Meal name"/>
         {/* button below should map to recipe display page */}
-        <ButtonLink label="Search" loc={RecipeDisplay}/> 
+        {/* <ButtonLink label="Search" loc=/>  */}
+        <ButtonLink label="Search"/> 
+
       </div>
       <div className="cat-options">
         <div className="cat-name">
