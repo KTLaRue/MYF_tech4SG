@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 export function ButtonLink({label, loc}) {
   return (
     <Fragment>
-      <button type="button" className="stores-search-button button" linkto = {loc}>
+      {/* <Link to={loc} */}
+      <button type="button" className="search-button button" linkto = {loc}>
           <span>{label}</span>
       </button>
     </Fragment>

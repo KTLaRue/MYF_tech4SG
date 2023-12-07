@@ -5,6 +5,9 @@ import { Helmet } from 'react-helmet'
 
 import '../styles/inventory.css'
 import { Navbar } from '../components/navbar'
+import { Title } from '../components/Title'
+import { ButtonWtext } from '../components/buttonWtext'
+import { ButtonLink } from '../components/buttonLink'
 
 const Inventory = (props) => {
   return (
@@ -14,7 +17,11 @@ const Inventory = (props) => {
         <meta property="og:title" content="Inventory - Map_Your_Food" />
       </Helmet>
       <Navbar/>
-      <div className="inventory-hero">
+      <Title title="Need to find raw ingredients or food products? Find them here!"/>
+      <ButtonWtext aspect="Food Item"/>
+      <ButtonLink label="Search"/> 
+
+      {/* <div className="inventory-hero">
         <div className="inventory-hero1">
           <div className="inventory-container1">
             <h1 className="inventory-hero-heading heading1">
@@ -30,7 +37,7 @@ const Inventory = (props) => {
             </span>
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

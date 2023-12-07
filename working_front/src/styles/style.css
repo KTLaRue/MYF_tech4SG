@@ -302,7 +302,7 @@ body{
 
 .cat-name {
   flex: 0 0 auto;
-  width: 25%;
+  width: 20%;
   height: auto;
   display: flex;
   align-self: flex-start;
@@ -323,6 +323,10 @@ body{
   align-items: flex-start;
   margin-bottom: var(--dl-space-space-halfunit);
   justify-content: flex-start;
+}
+.search-button {
+  width: 242px;
+  height: 61px;
 }
 .button-bar {
   width: flex;
