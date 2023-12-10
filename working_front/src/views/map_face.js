@@ -8,7 +8,7 @@ import "../styles/map_style.css"
 const Map_face = (props) => {
     return (
         <Fragment>
-            <div className="header">
+            <div className="map-header">
                 <button onclick="goBack()">Back</button>
                 <h1>Google Maps</h1>
                 {/* <!-- This is your button-link --> */}
