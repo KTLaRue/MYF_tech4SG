@@ -23,3 +23,16 @@ activate by 'node router.js' in terminal when in the code file
 
 database info:
 if you want to pull the database and use it locally, youll need postgresql (psql) and you can run the command "psql -U your_username -d your_new_database -f mapYourFood.sql"
+
+Sqlite Database Usage: 
+
+* MAC Install: brew install sqlite
+
+* Initalize The Database: sqlite3 sqliteFoodDatbase.db
+
+* View Tables: .tables
+
+* View Contents of a table: select * from products order by product_id;
+
+* Select statement for table example: select * from products order by product_id;
+
