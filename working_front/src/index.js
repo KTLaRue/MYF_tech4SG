@@ -16,6 +16,7 @@ import Stores from './views/stores'
 import Recipes from './views/recipes'
 import NotFound from './views/not-found'
 import RecipeDisplay from './views/RecipeDisplay';
+import Map_face from './views/map_face'
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/stores" exact component={Stores}/>
         <Route path="/recipes" exact component={Recipes}/>
         <Route path="/recipeDisplay" exact component={RecipeDisplay}/>
+        <Route path="/map" exact component={Map_face}/>
         <Route path="*" exact component={NotFound}/>
       </Switch>
     </Router>
