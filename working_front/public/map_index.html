@@ -10,7 +10,6 @@
             padding: 0;
             font-family: Arial, sans-serif;
         }
-
         #header {
             background-color: #4285f4;
             color: white;
@@ -19,18 +18,15 @@
             justify-content: space-between;
             align-items: center;
         }
-
         #map-container {
             position: absolute;
-            top: 56px; /* Adjust based on your header height */
+            top: 56px;
             width: 100%;
-            height: calc(100% - 56px); /* Adjust based on your header height */
+            height: 500px;
         }
-
         #map {
             height: 100%;
         }
-
         #locationInput {
             position: absolute;
             top: 10px;
@@ -41,14 +37,19 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        form {
-            display: flex;
-            gap: 10px;
-        }
-
         button {
             cursor: pointer;
+        }
+        #directionsPanel {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none;
         }
     </style>
 </head>
@@ -60,28 +61,125 @@
 
 <div id="map-container">
     <div id="map"></div>
-
-    <!-- Add the HTML elements for user input here -->
     <div id="locationInput">
-        <form id="locationForm">
-            <!-- Update the input type to "text" and add an id for the Places Autocomplete service -->
-            <input type="text" id="mapSearch" placeholder="Search for a location">
-            <button type="button" id="findStoresButton">Find Grocery Stores</button>
-            <button type="button" id="useMyLocationButton">Use My Location</button>
-        </form>
+        <button type="button" id="useMyLocationButton">Use My Location</button>
+        <button type="button" id="getDirectionsButton">Get Directions</button>
     </div>
+    <div id="directionsPanel"></div>
 </div>
 
-<!-- Add the Google Maps API script with the Places library -->
+<!-- Google Maps API script -->
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZjD7YEAuFV_jMfrSdcWmSYWUq9iTMJU&callback=initMap&libraries=places"></script>
-<script src="../src/views/map.js"></script>
+
 <script>
-    // Your existing JavaScript code
+    let map, directionsService, directionsRenderer, userLocation, selectedDestination;
+    const markers = [];
+
+    function initMap() {
+        directionsService = new google.maps.DirectionsService();
+        directionsRenderer = new google.maps.DirectionsRenderer();
+
+        const options = {
+            center: { lat: 48.733843, lng: -122.48647 },
+            zoom: 10
+        };
+
+        map = new google.maps.Map(document.getElementById("map"), options);
+        directionsRenderer.setMap(map);
+
+        document.getElementById('useMyLocationButton').addEventListener('click', function () {
+            autoFillUserLocation();
+        });
+
+        document.getElementById('getDirectionsButton').addEventListener('click', function () {
+            if (userLocation && selectedDestination) {
+                getDirections(userLocation, selectedDestination);
+            } else {
+                alert('Please use your location and select a destination first.');
+            }
+        });
+    }
+
+    function autoFillUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                map.setCenter(userLocation);
+                findNearbyStores(userLocation);
+            },
+            function (error) {
+                alert('Error getting your location: ' + error.message);
+            },
+            { enableHighAccuracy: true } // This is the added option for high accuracy
+        );
+    } else {
+        alert('Geolocation is not supported by your browser.');
+    }
+}
+
+
+    function findNearbyStores(location) {
+        const service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+            location: location,
+            radius: 5000,
+            type: ['store']
+        }, function(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                clearMarkers();
+                for (let i = 0; i < results.length; i++) {
+                    createMarker(results[i]);
+                }
+            } else {
+                alert('Failed to find stores: ' + status);
+            }
+        });
+    }
+
+    function createMarker(place) {
+        const marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location,
+            title: place.name
+        });
+        markers.push(marker);
+
+        const infowindow = new google.maps.InfoWindow();
+        marker.addListener('click', function() {
+            infowindow.setContent(place.name);
+            infowindow.open(map, this);
+            selectedDestination = place.geometry.location; // Set the clicked location as the destination
+        });
+    }
+
+    function clearMarkers() {
+        for (let marker of markers) {
+            marker.setMap(null);
+        }
+        markers.length = 0;
+    }
+
+    function getDirections(origin, destination) {
+        const request = {
+            origin: origin,
+            destination: destination,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+
+        directionsService.route(request, function(response, status) {
+            if (status === 'OK') {
+                directionsRenderer.setDirections(response);
+                document.getElementById('directionsPanel').style.display = 'block';
+                directionsRenderer.setPanel(document.getElementById('directionsPanel'));
+            } else {
+                alert('Directions request failed: ' + status);
+            }
+        });
+    }
 
     function goBack() {
-        // Handle back button functionality here
-        // For example, you can navigate to the previous page or close the map view.
-        alert('Implement your back button functionality here.');
+        window.history.back();
     }
 </script>
 </body>
