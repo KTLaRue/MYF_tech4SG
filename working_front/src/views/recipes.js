@@ -42,10 +42,6 @@ function Find_criteria(){
 const Recipes = (props) => {
   return (
     <div className="page-container">
-      <Helmet>
-        <title>recipes - Map_Your_Food</title>
-        <meta property="og:title" content="recipes - Map_Your_Food" />
-      </Helmet>
       <Navbar/>
       <Title title="Looking for new recipes? Find them here!"/>
 

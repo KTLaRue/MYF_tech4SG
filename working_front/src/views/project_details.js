@@ -24,7 +24,7 @@ const Project_details = (props) => {
                 <dd>- Cameron LaPlante</dd>
                 <dd>- Anahita Saba</dd>
                 <dd>- Josh King</dd>
-            <dt>CSCI 436/536, Fall 2023, Ahmed</dt>
+            <dt>CSCI 436/536, Fall 2023, Shameem Ahmed</dt>
             <dt>Description of project</dt>
                 <dd>- Problem</dd>
                 <dd>- what are we solving?</dd>

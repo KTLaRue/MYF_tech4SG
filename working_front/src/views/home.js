@@ -12,10 +12,6 @@ import '../styles/home.css'
 const Home = (props) => {
   return (
     <div className="page-container">
-      <Helmet>
-        <title>Map_Your_Food</title>
-        <meta property="og:title" content="Map_Your_Food" />
-      </Helmet>
       <Navbar/>
       <div className="main-box">
         <div className="inner-box">

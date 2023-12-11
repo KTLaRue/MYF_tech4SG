@@ -33,10 +33,6 @@ const Favorites = (props) => {
 
   return (
     <div className="page-container">
-      <Helmet>
-        <title>favorites - Map_Your_Food</title>
-        <meta property="og:title" content="favorites - Map_Your_Food" />
-      </Helmet>
       <Navbar/>
       <Title title="Have a Favorite Recipe? Find it here!"/>
       {/* <Recipe_list/> */}
