@@ -10,7 +10,7 @@ import "../styles/style.css"
 
 // how do i ceate an list of inital components?
 // let inital_list = [
-//   {id: 0, {<FoodBox name="French Toast (with assorted berries)" time="10" 
+//   {id: 0, {FoodBox name="French Toast (with assorted berries)" time="10" 
 //           src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE0fHxmb29kfGVufDB8fHx8MTcwMDk0MjUxNnww&amp;ixlib=rb-4.0.3&amp;w=400"
 //           fav={true}/>}},
 //   {id: 1, {<FoodBox name="Veggie and Hawaiian Pizza" time="20" 
@@ -24,15 +24,15 @@ import "../styles/style.css"
 //           fav={true}/>}}
 // ]
 let inital_list = []
+// setlist(){
+
+// }
+
 const Favorites = (props) => {
   const [list, setlist] = useState(inital_list)
 
   return (
     <div className="page-container">
-      <Helmet>
-        <title>favorites - Map_Your_Food</title>
-        <meta property="og:title" content="favorites - Map_Your_Food" />
-      </Helmet>
       <Navbar/>
       <Title title="Have a Favorite Recipe? Find it here!"/>
       {/* <Recipe_list/> */}

@@ -51,12 +51,23 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             display: none;
         }
+        .button-link {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 <div id="header">
     <button onclick="goBack()">Back</button>
     <h1>Google Maps</h1>
+    <!-- This is your button-link -->
+    <a href="/path-to-your-destination" class="button-link">Your Label</a>
 </div>
 
 <div id="map-container">
