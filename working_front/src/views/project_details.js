@@ -1,13 +1,11 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
+
 
 import '../styles/style.css'
 import { Navbar } from '../components/navbar'
 import { Title } from '../components/Title'
-import { BoxWtext } from '../components/boxWtext'
-import { ButtonLink } from '../components/buttonLink'
-import { Writeup } from '../components/writeup'
+// import { Writeup } from '../components/writeup'
 
 const Project_details = (props) => {
   return (
@@ -28,37 +26,35 @@ const Project_details = (props) => {
                 <dd>- Josh King</dd>
             <dt>CSCI 436/536, Fall 2023, Ahmed</dt>
             <dt>Description of project</dt>
-                <dd>- </dd>
-                <dd>- </dd>
-                <dd>- </dd>
-                <dd>- </dd>
-                <dd>- </dd>
-                <dd>- </dd>
-                <dd>- </dd>
-                <dd>- </dd>
-                <dd>- </dd>
+                <dd>- Problem</dd>
+                <dd>- what are we solving?</dd>
+                <dd>- SDG goal?</dd>
+                <dd>- Why is this important?</dd>
+                <dd>- Who are we targeting? why should they care</dd>
+                <dd>- How many people could this impact?</dd>
+                <dd>- what is the solution</dd>
+                <dd>- How is this different?</dd>
+                <dd>- What technology have we used? why?</dd>
             <dt>Research Methodolgy</dt>
-                <dd>- </dd>
-                <dd>- </dd>
-                <dd>- </dd>
+                <dd>- Explain your systematic literature review. How many papers did you read? Write a summary of your findings. Give the pictures of your group prototype.</dd>
+                <dd>- Explain your system analysis. How many systems did you analyze? Write a summary of your findings. Give the pictures of your updated group prototype</dd>
+                <dd>- Explain your user study. How many interviews did you conduct? Write a summary of your findings. Give the pictures of your updated group prototype.</dd>
             <dt>Final Product</dt>
-                <dd>- </dd>
-                <dd>- </dd>
-                <dd>- </dd>
+                <dd>- discuss every feature</dd>
+                <dd>- discuss all technologies/software/API's used</dd>
+                {/* link to project code repo */}
+                <dd><a href= "https://github.com/KTLaRue/MYF_tech4SG">Code Repo</a></dd>
             <dt>Video</dt>
-                <dd>- </dd>
+                {/* link to website video */}
+                {/* <Link to> */}
+                <dd><a href= "">Website Walkthrough (not yet linked)</a></dd>
+                {/* </Link> */}
             <dt>Future Work</dt>
-                <dd>- </dd>
+                <dd>- How could this be extended and Why would it be useful?</dd>
           </dl>
 
         </div>
         
-        {/* <dl>
-            <dt>Coffee</dt>
-                <dd>- black hot drink</dd>
-            <dt>Milk</dt>
-                <dd>- white cold drink</dd>
-        </dl> */}
 
     </Fragment>
     
