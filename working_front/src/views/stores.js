@@ -17,7 +17,7 @@ const Stores = (props) => {
       <Navbar/>
       <Title title="Need to find nearby stores? Find them here!"/>
       {/* button below should link to maps page */}
-      <ButtonLink label="Search" />
+      <ButtonLink label="Search" loc="./map"/>
     </div>
   )
 }

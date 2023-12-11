@@ -24,6 +24,9 @@ export function Navbar() {
                 <Link to="/inventory" className="navlink">
                   Inventory
                 </Link>
+                <Link to="/projectDetails" className="navlink">
+                  Project Details
+                </Link>
               </nav>
             </div>
           </header>
