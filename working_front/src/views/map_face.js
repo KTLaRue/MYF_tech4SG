@@ -9,7 +9,7 @@ const Map_face = (props) => {
     return (
         <Fragment>
             <div className="map-header">
-                <button onclick="goBack()">Back</button>
+                <button onClick={() => goBack()}>Back</button>
                 <h1>Google Maps</h1>
                 {/* <!-- This is your button-link --> */}
                 {/* <a href="/path-to-your-destination" class="button-link">Your Label</a> */}
@@ -18,6 +18,7 @@ const Map_face = (props) => {
             <div id="map-container">
                 <div id="map"></div>
                 <div id="locationInput">
+                    {/* need to add on click event */}
                     <button type="button" id="useMyLocationButton">Use My Location</button>
                     <button type="button" id="getDirectionsButton">Get Directions</button>
                 </div>
@@ -28,6 +29,8 @@ const Map_face = (props) => {
             <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZjD7YEAuFV_jMfrSdcWmSYWUq9iTMJU&callback=initMap&libraries=places"></script>
 
             <script>
+                {/* call use effects to render methods  - make sure to pass empty array */}
+                {/* https://www.w3schools.com/react/react_useeffect.asp */}
                 let map, directionsService, directionsRenderer, userLocation, selectedDestination;
                 const markers = [];
                 initMap();
