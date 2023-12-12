@@ -23,7 +23,7 @@ const Project_details = (props) => {
                 <dd>- Katie LaRue: laruek2@wwu.edu</dd>
                 <dd>- Cameron LaPlante</dd>
                 <dd>- Anahita Saba</dd>
-                <dd>- Josh King</dd>
+                <dd>- Josh King: kingj44@wwu.edu</dd>
             <dt>CSCI 436/536, Fall 2023, Shameem Ahmed</dt>
             <dt>Description of project</dt>
                 <dd>- Navigating the complex landscape of food management presents a formidable challenge, particularly when faced with the trifecta of acclimating to a new environment, embracing the rigors of a fresh diet, or negotiating the delicate terrain of dietary restrictions. The complexity deepens when financial management enters the stage, intensifying the difficulty for those who are beginners in the world of budgeting or grappling with limited resources that fall short of satisfying their culinary needs. In essence, it becomes a multifaceted puzzle, where the elements involve not only the selection of suitable ingredients but also the coordination of a budget friendly symphony and the resourceful improvisation needed to create a harmonious culinary experience amidst new circumstances.</dd>
@@ -37,11 +37,13 @@ const Project_details = (props) => {
                 <dd>- We have made a website that can be acseeses by anyone for ease of use on personal devices and so that people who dont have computers or a phone can use our website</dd>
             <dt>Research Methodolgy</dt>
                 <dd>- Explain your systematic literature review. How many papers did you read? Write a summary of your findings. Give the pictures of your group prototype.</dd>
-                
+                <dd>- We read through 8 papers and came up with several ideas for our design. We learned that having the user input what they want to use in a meal is the cleanest way to know what's in their pantry. We also learned that a favorits system would help to tailor the site to the users and provide better results. </dd>
                 <dd>- Explain your system analysis. How many systems did you analyze? Write a summary of your findings. Give the pictures of your updated group prototype</dd>
+                <dd>- We analyzed 8 systems and came up with several changes and additional features to help improve our website. One of these a store info card with inventory and coupons sections. This allows users to see what is on sale at tier desired store and see if there is anything that they need that can be purchased for a reduced price. Another new page is the food ingredient page. This has all the locations that a user can find that item as well as the price at each location. It allows the user to add that item to a cart to more effectively keep track of what items a user needs to purchase and at what locations they might need to visit. Along with this it shows a sample of a recipe nutrition page which now not only shows info like ingredients, cook time, and calories but also price and nutrition information to better inform the user to make budget friendly and healthy decisions. The Home page was also changed to show more pictures of recipes to encourage newcomers to click around and use the site. Some features of the site would be restricted until a user logs in like the shopping list and favorites list but they could still search for recipes and ingredients. </dd>
                 <dd>- Explain your user study. How many interviews did you conduct? Write a summary of your findings. Give the pictures of your updated group prototype.</dd>
             <dt>Final Product</dt>
                 <dd>- discuss every feature</dd>
+                <dd>- The recipe search uses a 3rd party API called Edamam which we query using the information filled into website page. We have options to refine searches by max time, calories, cuisine like American or South East Asian, type of dish like salad or main dishes, types of diet like low-carb or high-protein, and many types of health options inluding peanut free and vegan. After being we get the data from our query we display it at the bottom of the page is showing the total name, picture, prep time, and a link to the website containing the recipe to help the user explore their options.</dd>
                 <dd>- WE have gone through several versions of this project from learening about React, Node.js and Express to HTML and a couple other libraies that we cant remember. We have also worked with SQL, Glitch, and sqllite for glitch.</dd>
                 {/* link to project code repo */}
                 <dd><a href= "https://github.com/KTLaRue/MYF_tech4SG">Code Repo</a></dd>
