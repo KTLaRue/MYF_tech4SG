@@ -14,9 +14,9 @@ const Inventory = (props) => {
 
       <Navbar/>
       <Title title="Need to find raw ingredients or food products? Find them here!"/>
-      <BoxWtext aspect="Food Item"/>
+      {/* <BoxWtext aspect="Food Item"/> */}
       {/* button currently linked to home page */}
-      <ButtonLink label="Search" loc="./database"/> 
+      <ButtonLink label="Search" loc="./"/> 
     </div>
   )
 }
