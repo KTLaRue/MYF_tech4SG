@@ -40,7 +40,7 @@ export function FoodBox({id, name, time, src, favorites, remove, url}) {
                   <a href={url}>Click Here For Recipe</a>
                 </span>
                 <button type="button" className="button">
-                  Add from Favorites
+                  Add to Favorites
                 </button>
               </div>
               <img
