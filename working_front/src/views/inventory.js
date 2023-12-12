@@ -16,7 +16,7 @@ const Inventory = (props) => {
       <Title title="Need to find raw ingredients or food products? Find them here!"/>
       <BoxWtext aspect="Food Item"/>
       {/* button currently linked to home page */}
-      <ButtonLink label="Search" loc="./"/> 
+      <ButtonLink label="Search" loc="./database"/> 
     </div>
   )
 }
