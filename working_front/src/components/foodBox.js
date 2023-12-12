@@ -1,11 +1,11 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-export function FoodBox({name, time, src, favorites}) {
+export function FoodBox({id, name, time, src, favorites, remove}) {
   if (favorites){
     return (
       <Fragment>
-            <div className="food-main-box">
+            <div className="food-main-box" id={id}>
               <div className="food-info">
                 <h2 className="food-info-heading heading2">
                   {name}
@@ -13,7 +13,7 @@ export function FoodBox({name, time, src, favorites}) {
                 <span className="food-info-sub-heading">
                   Prep time: {time}min
                 </span>
-                <button type="button" className="button">
+                <button onClick={() => remove(id)} type="button" className="button">
                   Remove from Favorites
                 </button>
               </div>
@@ -26,7 +26,7 @@ export function FoodBox({name, time, src, favorites}) {
       </Fragment>
     );
   }
-
+  // event.currentTarget.this.props.id)
   // food item is not in favorites page
   return (
     <Fragment>
@@ -38,9 +38,6 @@ export function FoodBox({name, time, src, favorites}) {
               <span className="food-info-sub-heading">
                 Prep time: {time}min
               </span>
-              <button type="button" className="button">
-                Remove from Favorites
-              </button>
             </div>
             <img
               alt="image"
