@@ -30,19 +30,18 @@ In views:
 
 In styles:
 
-← `favorites.css`: This manages the styles for tracking favorite recipes
 
-← `inventory.css`: This manages the styles for finding what stores have what items
 
-← `recipies.css`: This manages the styles for finding recipes that match your dietary needs
+← `home.css`: This manages the styles for the home page
 
-← `stores.css`: This manages the styles for finding stores near you
+← `map_style.css`: This manages the styles for finding stores near you and the google maps
 
-← `style.css`: this adds general styling rules to the content. The CSS applies styles to the elements in the HTML page.
+← `style.css`: this adds general styling rules to the content. The CSS applies styles to the rest of the website.
 
 ## how to run this project
 
-Go to the following link and explore!
+in this folder, once npm has been installed, run the following commands in a terminal.
 
-https://lava-vast-dragonfly.glitch.me/
+npm install
+npm start
 
