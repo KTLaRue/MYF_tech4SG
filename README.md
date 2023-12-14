@@ -9,7 +9,7 @@ map-your-food:
 page hosted at http://localhost:3000/ once repo is pulled.
 
 Make sure you have npm installed: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
-With npm installed navigate to map-your-food
+With npm installed navigate to the MapYourFood folder
 Run the following commands: 
 npm install 
 npm start
