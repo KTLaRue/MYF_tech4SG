@@ -36,12 +36,14 @@ In views:
 In styles:
 
 
-
 ← `home.css`: This manages the styles for the home page
 
 ← `map_style.css`: This manages the styles for finding stores near you and the google maps
 
 ← `style.css`: this adds general styling rules to the content. The CSS applies styles to the rest of the website.
+
+
+components hold all the node.js components for easy modularity and consistancy between pages
 
 ## how to run this project
 
