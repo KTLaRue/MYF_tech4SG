@@ -21,10 +21,15 @@ In views:
 ← `recipies.js`: This manages the front end for finding recipes that match your dietary needs
 
 ← `stores.js`: This manages the front end for finding stores near you
+
 ← `map_face.js`: This manages the google maps aspects of finding stores near you
+
 ← `RecipieDisplay.js`: This manages displaying recipies
+
 ← `home.js`: This manages the home page and website navigation
+
 ← `project_details.js`: This describes the process of creating this project
+
 ← `server.js`: This manages the creation and querys of our database
 
 
