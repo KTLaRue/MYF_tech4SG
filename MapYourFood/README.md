@@ -2,26 +2,31 @@
 
 This is our Map Your Food webiste designed to help people find recipies and ingredients to mmatch any dietary restrictions. we currently have 4 main sections. favorites, find stores, find recipies, and current (store) inventory
 
-_Last updated: Dec 3 2023_
+_Last updated: Dec 33 2023_
 
 ## What's in this project?
 
 ← `README.md`: That's this file, which tells people what website does and how you built it.
 
-← `index.html`: This is the main web page for your site. The HTML defines the structure and content of the page using _elements_. You'll see references in the HTML to the JS and CSS files. Try clicking the image in the center of the page!
 
 
-in the src folder we have views and style folders
+in the src folder we have views, components, and style folders
 
 In views:
 
-← `favorites.html`: This manages the front end for tracking favorite recipes
+← `favorites.js`: This manages the front end for tracking favorite recipes
 
-← `inventory.html`: This manages the front end for finding what stores have what items
+← `inventory.js`: This manages the front end for finding what stores have what items
 
-← `recipies.html`: This manages the front end for finding recipes that match your dietary needs
+← `recipies.js`: This manages the front end for finding recipes that match your dietary needs
 
-← `stores.html`: This manages the front end for finding stores near you
+← `stores.js`: This manages the front end for finding stores near you
+← `map_face.js`: This manages the google maps aspects of finding stores near you
+← `RecipieDisplay.js`: This manages displaying recipies
+← `home.js`: This manages the home page and website navigation
+← `project_details.js`: This describes the process of creating this project
+← `server.js`: This manages the creation and querys of our database
+
 
 In styles:
 
