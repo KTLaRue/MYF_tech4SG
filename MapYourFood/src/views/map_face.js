@@ -19,7 +19,7 @@ const Map_face = (props) => {
   const loadGoogleMapsScript = () => {
     const script = document.createElement('script');
     script.src =
-      'https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZjD7YEAuFV_jMfrSdcWmSYWUq9iTMJU&callback=initMap&libraries=places';
+      'https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=places';
     script.async = true;
     script.defer = true;
     document.head.appendChild(script);
